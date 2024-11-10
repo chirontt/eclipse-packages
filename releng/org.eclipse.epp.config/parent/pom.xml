@@ -86,6 +86,12 @@
   </pluginRepositories>
 
   <repositories>
+    <!-- temp FreeBSD p2 repo, until Eclipse's official p2 repo supports FreeBSD aarch64/x86_64 platforms -->
+    <repository>
+      <id>freebsd-p2-repo</id>
+      <layout>p2</layout>
+      <url>https://chirontt.github.io/p2/platform/repository/${RELEASE_VERSION}</url>
+    </repository>
     <repository>
       <id>eclipse-simultaneous-release</id>
       <layout>p2</layout>
@@ -131,6 +137,17 @@
           <executionEnvironment>${execution.environment}</executionEnvironment>
           <environments>
             <environment>
+              <os>freebsd</os>
+              <ws>gtk</ws>
+              <arch>x86_64</arch>
+            </environment>
+            <environment>
+              <os>freebsd</os>
+              <ws>gtk</ws>
+              <arch>aarch64</arch>
+            </environment>
+<!-- not built in this fork
+            <environment>
               <os>linux</os>
               <ws>gtk</ws>
               <arch>x86_64</arch>
@@ -155,6 +172,7 @@
               <ws>cocoa</ws>
               <arch>aarch64</arch>
             </environment>
+-->
           </environments>
         </configuration>
       </plugin>
@@ -292,6 +310,7 @@
           </executions>
           <configuration>
             <formats>
+              <freebsd>tar.gz</freebsd>
               <linux>tar.gz</linux>
               <macosx>tar.gz</macosx>
               <win32>zip</win32>
