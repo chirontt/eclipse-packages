@@ -124,6 +124,7 @@
   <!-- Simple Types -->
   <xsd:simpleType name="osType">
     <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="freebsd"/>
       <xsd:enumeration value="win32"/>
       <xsd:enumeration value="linux"/>
       <xsd:enumeration value="macosx"/>
