@@ -47,6 +47,7 @@
       startupMessageRect="7,265,320,20"
       startupForegroundColor="ffffff" />
    <launcher name="eclipse">
+      <freebsd icon="../../icons/icon.xpm"/>
       <linux icon="../../icons/icon.xpm"/>
       <macosx icon="../../icons/Eclipse.icns">
          <bundleUrlTypes>
@@ -62,6 +63,7 @@
    <intro introId="org.eclipse.ui.intro.universal"/>
 
    <vm>
+      <freebsd include="false">org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-21</freebsd>
       <linux include="false">org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-21</linux>
       <macos include="false">org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-21</macos>
       <windows include="false">org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-21</windows>
